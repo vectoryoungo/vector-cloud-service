@@ -41,5 +41,20 @@ public class KongFuProviderController {
 
         return teacherList;
     }
+
+    @GetMapping(value = "/getAnimals")
+    public List<String> getAnimals() {
+        List<String> animals = new ArrayList<>(16);
+        animals.add("Dolph");
+        animals.add("Shark");
+        animals.add("Chicken");
+        animals.add("Puppy");
+        animals.add("Snake");
+        animals.add("Fish");
+        animals.add("Eagle");
+        animals.add("Elephant");
+
+        return animals;
+    }
 }
 
