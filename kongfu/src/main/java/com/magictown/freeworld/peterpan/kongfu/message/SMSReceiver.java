@@ -9,13 +9,13 @@ import org.springframework.amqp.rabbit.annotation.*;
 import org.springframework.stereotype.Component;
 
 @Component
-@RabbitListener(
-        bindings = @QueueBinding(value = @Queue(value = "order.sms",autoDelete = "true"),
-                exchange = @Exchange(value ="${vrabbitmq.config.fanout.exchange}",type = ExchangeTypes.FANOUT))
-)
+//@RabbitListener(
+//        bindings = @QueueBinding(value = @Queue(value = "order.sms",autoDelete = "true"),
+//                exchange = @Exchange(value ="${vrabbitmq.config.fanout.exchange}",type = ExchangeTypes.FANOUT))
+//)
 public class SMSReceiver {
 
-    @RabbitHandler
+    //@RabbitHandler
     public void process(String message) {
         System.out.println("already receive sms message " + message);
     }
